@@ -5,3 +5,6 @@ psycopg2-binary
 python-decouple
 django-environ
 Pillow
+django-filter
+pgvector
+djangorestframework-simplejwt

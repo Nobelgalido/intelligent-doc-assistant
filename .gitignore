@@ -356,3 +356,4 @@ site/
 # Keep empty directories with .gitkeep
 !media/.gitkeep
 !staticfiles/.gitkeep
+.aider*
