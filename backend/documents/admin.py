@@ -13,7 +13,7 @@ class DocumentAdmin(admin.ModelAdmin):
     list_display = ['title', 'user', 'file_type', 'status', 'created_at']
     list_filter = ['file_type', 'status', 'created_at']
     search_fields = ['title', 'user__email']
-    readonly_fields = ['file_size', 'page_count', 'word_count', 'processed_at']
+    readonly_fields = ['file_size', 'page_count', 'word_count', 'processed_at']  # Fixed: processing_at -> processed_at
     
 @admin.register(DocumentChunk)
 class DocumentChunkAdmin(admin.ModelAdmin):

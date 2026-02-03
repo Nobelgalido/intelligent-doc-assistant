@@ -13,4 +13,6 @@ class UserAdmin(BaseUserAdmin):
         ('Additional Info',{'fields': ('phone','avatar', 'bio', 'github_profile','linkedin_profile','portforlio_url')}),
         ('Statistics',{'fields': ('total_documents','total_questions','is_verified')}),
     )
+    
+
    
