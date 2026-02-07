@@ -80,8 +80,8 @@ class DocumentChunk(models.Model):
     chunk_index = models.IntegerField(help_text='Index of the chunk within the document')
     page_number = models.IntegerField(null=True, blank=True, help_text='Page number from which the chunk was extracted, if applicable')
     
-    # Vector embedding (768 dimensions for Gemini)
-    embedding = VectorField(dimensions=768, null=True, blank=True)
+    # Vector embedding (3072 dimensions for Gemini)
+    embedding = VectorField(dimensions=3072, null=True, blank=True)
     
     # Metadata
     created_at = models.DateTimeField(auto_now_add=True)

@@ -189,3 +189,9 @@ CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
 # FILE UPLOAD SETTINGS
 MAX_UPLOAD_SIZE = 50 * 1024 * 1024  # 50 MB
 ALLOWED_DOCUMENT_TYPES = ['pdf', 'docx', 'txt', 'md']
+
+# AI CONFIGURATION (Google Gemini)
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+GEMINI_MODEL_NAME = config('GEMINI_MODEL_NAME', default='gemini-1.5-pro')
+GEMINI_EMBEDDING_MODEL = config('GEMINI_EMBEDDING_MODEL', default='models/text-embedding-004')
+AI_TEMPERATURE = config('AI_TEMPERATURE', default=0.7, cast=float)

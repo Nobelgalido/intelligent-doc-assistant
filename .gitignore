@@ -357,3 +357,8 @@ site/
 !media/.gitkeep
 !staticfiles/.gitkeep
 .aider*
+
+# Test and utility scripts
+test_*.py
+process_docs_sync.py
+upload_test_docs.py

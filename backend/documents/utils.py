@@ -13,7 +13,6 @@ class DocumentProcessor:
         try:
             with open(file_path, 'rb') as file:
                 pdf_reader = PyPDF2.PdfReader(file)
-                PdfReader(file)
                 page_count = len(pdf_reader.pages)
                 
                 for page in pdf_reader.pages:
@@ -34,6 +33,16 @@ class DocumentProcessor:
             return text, max(1,page_count)
         except Exception as e:
             raise Exception(f"Error extracting text from DOCX: {str(e)}")
+    
+    @staticmethod
+    def extract_text_from_txt(file_path: str) -> tuple[str, int]:
+        """Extract text and page count from a TXT file."""
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                text = file.read()
+            return text.strip(), 1  # TXT files are considered single-page
+        except Exception as e:
+            raise Exception(f"Error extracting text from TXT: {str(e)}")
     
     @staticmethod
     def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 200) -> List[str]:
